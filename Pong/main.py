@@ -35,7 +35,8 @@ while set_on:
         ball.stroke()
     elif ball.distance(r_paddle) < 50 and ball.xcor() > 320:
         ball.stroke()
-    #if abs(ball.xcor()) >=400:
-    #    point!
+    if abs(ball.xcor()) >=400:
+        point!
+
 
 screen.exitonclick()
