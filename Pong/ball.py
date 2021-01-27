@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Ball(Turtle):
     x_move = 10
     y_move = 10
@@ -11,6 +12,7 @@ class Ball(Turtle):
         self.shape('circle')
         self.goto(0, 0)
         self.seth(45)
+        self.move_speed = .1
 
     def move(self):
         new_x = self.xcor() + self.x_move
@@ -22,4 +24,9 @@ class Ball(Turtle):
 
     def stroke(self):
         self.x_move *= -1
+        self.move_speed *= 0.9
 
+    def rally_start(self):
+        self.goto(0, 0)
+        self.stroke()
+        self.move_speed = 0.1
